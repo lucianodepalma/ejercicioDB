@@ -1,0 +1,25 @@
+CREATE DATABASE  IF NOT EXISTS clase30
+USE clase30;
+DROP TABLE IF EXISTS usuarios;
+CREATE TABLE usuarios (
+  id smallint(6) not null auto_increment,
+  nombre varchar(100) NOT NULL,
+  email varchar(100 )NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+DROP TABLE IF EXISTS notas;
+CREATE TABLE notas (
+  id smallint(6) NOT NULL auto_increment,
+  id_usuario smallint(6) NOT NULL,
+  titulo varchar(100) NULL,
+  fecha_de_creacion DATE NOT NULL,
+  fecha_modificacion DATE NOT NULL,
+  eliminable tinyint(1) NOT NULL,
+  descripcion text NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE categorias (
+  id smallint(6) NOT NULL auto_increment,
+  nombre varchar(100) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

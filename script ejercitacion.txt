@@ -23,3 +23,9 @@ CREATE TABLE categorias (
   nombre varchar(100) NOT NULL,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE notas_categorias (
+  id smallint(6) NOT NULL auto_increment,
+  id_notas smallint(6) NOT NULL,
+  id_categorias smallint(6) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

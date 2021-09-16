@@ -29,3 +29,56 @@ CREATE TABLE notas_categorias (
   id_categorias smallint(6) NOT NULL,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+LOCK TABLES usuarios WRITE;
+INSERT INTO usuarios 
+VALUE 
+	(1, 'Juan Garnizo', 'juangarnizo@hotmail.com'),
+	(2, 'Pedro Alonzo', 'pedroalonzo@gmail.com'),
+	(3, 'Luciano De Palma', 'lucianodepalma@hotmail.com'),
+	(4, 'Gabriel Messi', 'gabrielmessi@hotmail.com'),
+	(5, 'Norma Leandro', 'normaleandro@yahoo.com.ar'),
+	(6, 'Martin Perez Disalvo', 'martinpdisalvo@gmail.com'),
+	(7, 'Victor Zael', 'victorzael@gmail.com'),
+	(8, 'Damian Cruck', 'damiancruck@hotmail.com'),
+	(9, 'Adrian Paenza', 'adrianpaenza@yahoo.com.ar),
+	(10, 'Francisco Bergoglio', 'francobergoglio@hotmail.com')
+UNLOCK TABLES;
+LOCK TABLES notas WRITE;
+INSERT INTO notas 
+VALUE 
+	(1, 3, 'titulo de nota', 25/06/2020, 16/08/2021, 1, 'lorem itsum con el contenido de la nota'),
+	(2, 6, 'titulo de nota', 20/11/2019, 03/05/2021, 1, 'lorem itsum con el contenido de la nota'),
+	(3, 4, 'titulo de nota', 12/03/2021, 29/07/2021, 1, 'lorem itsum con el contenido de la nota'),
+	(4, 1, 'titulo de nota', 03/05/2020, 13/09/2021, 1, 'lorem itsum con el contenido de la nota'),
+	(5, 3, 'titulo de nota', 25/04/2019, 16/01/2020, 1, 'lorem itsum con el contenido de la nota'),
+	(6, 8, 'titulo de nota', 15/11/2020, 03/07/2021, 1, 'lorem itsum con el contenido de la nota'),
+	(7, 10, 'titulo de nota', 02/12/2019, 03/03/2021, 1, 'lorem itsum con el contenido de la nota'),
+	(8, 5, 'titulo de nota', 15/09/2020, 17/07/2021, 1, 'lorem itsum con el contenido de la nota'),
+	(9, 4, 'titulo de nota', 21/02/2021, 13/06/2021, 1, 'lorem itsum con el contenido de la nota'),
+	(10, 3, 'titulo de nota', 25/06/2019, 16/11/2020, 1, 'lorem itsum con el contenido de la nota'),
+UNLOCK TABLES;
+LOCK TABLES categorias WRITE;
+INSERT INTO categorias 
+VALUE 
+	(1, 'arte'),
+	(2, 'deportes'),
+	(3, 'política'),
+	(4, 'profesión'),
+	(5, 'hoobies'),
+	(6, 'estudios'),
+UNLOCK TABLES;
+LOCK TABLES notas_categorias WRITE;
+INSERT INTO notas_categorias 
+VALUE
+	(1, 4, 1),
+	(2, 2, 1),
+	(3, 3, 6),
+	(4, 7, 5),
+	(5, 2, 5),
+	(6, 4, 3),
+	(7, 7, 1),
+	(8, 5, 2),
+	(9, 9, 1),
+	(10, 1, 4),
+UNLOCK TABLES;
+	
